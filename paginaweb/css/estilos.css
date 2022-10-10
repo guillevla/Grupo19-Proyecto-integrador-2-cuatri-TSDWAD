@@ -1,0 +1,14 @@
+.social-bar{
+    position: sticky;    
+    font-size: 3rem;
+    display: flex;    
+    align-items: center;
+    justify-content: center;  
+    }
+
+    .card{
+        display: flex;  
+        justify-content: center;
+        position: sticky;
+        margin: 25px;
+    }
