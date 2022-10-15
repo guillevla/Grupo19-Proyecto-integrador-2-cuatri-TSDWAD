@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INAD</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">   
-    <link rel="stylesheet" href="css/estilos.css"/>
+   <link rel="stylesheet" href="css">  
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 
@@ -27,6 +27,54 @@
         <img class="header__logo" src="imagenes/ballet.png"/>
     </header>
    
+    <main> 
+        <section class="fondo" >
+          <div class="container">      
+            <h2 class="h2formulario">Formulario de Contacto </h2>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Direccion de Mail</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Tipo de consulta</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione una opción</option>
+                            <option value="1">Presupuesto de obra</option>
+                            <option value="2">Presupuesto de mantenimiento o reparación </option>
+                            <option value="3">Visita técnica</option>
+                            <option value="4">Asesoramiento</option>
+                            <option value="5">Pago a proveedores</option>
+                            <option value="6">Reclamo</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Su Consulta</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>             
+
+                        <div>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Como conoció nuestra empresa</option>
+                                <option value="1">Google</option>
+                                <option value="2">Página Web</option>
+                                <option value="3">Instagram</option>
+                                <option value="4">Facebook</option>
+                              </select>    
+                        </div>                       
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOZzIDs8jnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+                </div>  
+            </div>                
+          </div>    
+         </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -47,7 +95,7 @@
                         <a href="https://es-la.facebook.com/pg/INAD/posts/" Facebook" class="icon icon-facebook2" target="_blank"></a>
                     </div>
                 </div>
-                     <p>Derechos Reservados IND  2022</p>
+                     <p>Derechos Reservados INAD  2022</p>
                 </div>
             </div>
         </div> 
@@ -57,7 +105,8 @@
         </div>
         
      </footer>
-         <script src="js/bootstrap.bundle.js"></script>   
+    
+     <script src="js/bootstrap.bundle.js"></script>  
          
     </body>
     </html>
