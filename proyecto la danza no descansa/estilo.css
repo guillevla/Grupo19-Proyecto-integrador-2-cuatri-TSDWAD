@@ -30,6 +30,9 @@ header{
 .nav-header ul li a h1{
     padding: 0 50px;
 }
+a:hover{
+    opacity: .3;
+}
 .carusell{
     width: 80%;
     height: 100vh;
