@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: content-box;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    width: 100%;
+}
+.nav-header{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.nav-header img{
+    width: 4em;
+}
+.nav-header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-header ul li a{
+    margin: 30px;
+    color: #000;
+}
+.nav-header ul li a h1{
+    padding: 0 50px;
+}
+a:hover{
+    opacity: .3;
+}
+.carusell{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    background-color: #e84a4a;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: all 2.5s ease-in-out;
+    background-image: url(./img/1.jpg);
+    animation: banner 13S infinite linear;
+    box-shadow: 1px 0 20px rgb(155, 147, 147);
+    margin: auto;
+}
+
+footer{
+    display: flex;
+    background-color: pink;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+.Autoridades{
+    color: black;
+    background-color: pink;
+    width: 5%;
+    padding-inline-start: 0px;
+    text-align: center;
+}
+
+.Academica{
+    color: black;
+    background-color: pink;
+    width: 15%;
+}
+
+.Contacto{
+    color: black;
+    background-color: pink;
+    width: 50%;
+    font-size:large;
+    
+}
+
+
+
+@keyframes banner{
+    0%{
+        background-image: url(./img/1.jpg);
+    }
+    25%{
+        background-image: url(./img/1.jpg);
+    }
+    26%{
+        background-image: url(./img/2.jpg);
+    }
+    50%{
+        background-image: url(./img/2.jpg);
+    }
+    51%{
+        background-image: url(./img/3.jpg);
+
+    }
+    75%{
+        background-image: url(./img/3.jpg);
+    }
+    76%{
+        background-image: url(./img/4.jpg);
+    }
+    100%{
+        background-image: url(./img/4.jpg);
+    }
+}
+
