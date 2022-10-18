@@ -1,76 +1,90 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: content-box;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: content-box;
 }
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: antiquewhite;
-    width: 100%;
+body {
+  background-image: url(./img/fondo.webp);
+  object-fit:cover ;
 }
-.nav-header{
-    margin-top: 30px;
-    margin-left: 30px;
+header {
+  background-color: rgb(131, 127, 127);
+  width: 100%;
+  text-decoration: none;
 }
-.nav-header img{
-    width: 4em;
+header > ul > a {
+  text-decoration: none;
 }
-.nav-header ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+.img-nav {
+  width: 4em;
 }
-.nav-header ul li a{
-    margin: 30px;
-    color: #000;
+.nav-header ul li a {
+  color: rgb(253, 253, 253);
 }
-.nav-header ul li a h1{
-    padding: 0 50px;
+
+a:hover {
+  opacity: 0.3;
 }
-a:hover{
-    opacity: .3;
+.carusell {
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  background-color: #ffffff;
+  background-size: 100% 100%;
+  background-position: center;
+  transition: all 2.5s ease-in-out;
+  background-image: url(./img/1.jpg);
+  animation: banner 13s infinite linear;
+  box-shadow: 1px 0 20px rgb(155, 147, 147);
+  margin: auto;
 }
-.carusell{
-    width: 80%;
-    height: 100vh;
-    position: relative;
-    background-color: #e84a4a;
-    background-size: 100% 100%;
-    background-position: center;
-    transition: all 2.5s ease-in-out;
+
+@keyframes banner {
+  0% {
     background-image: url(./img/1.jpg);
-    animation: banner 13S infinite linear;
-    box-shadow: 1px 0 20px rgb(155, 147, 147);
-    margin: auto;
+  }
+  25% {
+    background-image: url(./img/1.jpg);
+  }
+  26% {
+    background-image: url(./img/2.jpg);
+  }
+  50% {
+    background-image: url(./img/2.jpg);
+  }
+  51% {
+    background-image: url(./img/3.jpg);
+  }
+  75% {
+    background-image: url(./img/3.jpg);
+  }
+  76% {
+    background-image: url(./img/4.jpg);
+  }
+  100% {
+    background-image: url(./img/4.jpg);
+  }
 }
 
-@keyframes banner{
-    0%{
-        background-image: url(./img/1.jpg);
-    }
-    25%{
-        background-image: url(./img/1.jpg);
-    }
-    26%{
-        background-image: url(./img/2.jpg);
-    }
-    50%{
-        background-image: url(./img/2.jpg);
-    }
-    51%{
-        background-image: url(./img/3.jpg);
-
-    }
-    75%{
-        background-image: url(./img/3.jpg);
-    }
-    76%{
-        background-image: url(./img/4.jpg);
-    }
-    100%{
-        background-image: url(./img/4.jpg);
-    }
+.Noticias {
+  width: 100%;
+  margin-top: 20em;
+}
+.header-noticias {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+.header-footer {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+.cont-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #805e5e;
 }
