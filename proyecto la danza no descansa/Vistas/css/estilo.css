@@ -89,3 +89,46 @@ a:hover {
   background-color: #805e5e;
   margin-bottom: 50px;
 }
+
+
+
+.footer{
+  background-color: #a2aaa2;
+  color:white; 
+  padding-top: 20px;
+  padding-left: 20px;   
+  padding-right: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;     
+  font-size: 15px;   
+  text-align: center;
+  align-content: space-around;
+}
+
+  .mapa{
+    width: 100%;
+    color: black;
+  }
+  .social-bar{
+    position: sticky;    
+    font-size: 3rem;
+    display: flex;    
+    align-items: center;
+    justify-content: center;  
+}
+
+.icon{
+    color: blue;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;   
+}
+
+.card{
+    display: flex;  
+    justify-content: center;
+    position: sticky;
+    margin: 25px;
+}
