@@ -26,7 +26,7 @@ create table Alumno(
 id_Alumno int not null auto_increment,
 nombre_Alumno varchar(50) not null,
 apellido_Alumno varchar(50) not null,
-direccion_Alumbo varchar(150) not null,
+direccion_Alumno varchar(150) not null,
 email_Alumno varchar(150) not null,
 telefono_Alumno bigint,
 id_Academia2 int not null,
