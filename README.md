@@ -1,2 +1,2 @@
 # Grupo19-Proyecto-integrador-2-cuatri-TSDWAD
-Proyecto integrador 2° cuatrimestre - ISPC
+Aqui iremos subiendo el desarrollo de nuestra pagina web
