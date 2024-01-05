@@ -8,20 +8,15 @@ body {
   background-image: url(./img/fondo.webp);
   object-fit:cover ;
 }
-header {
-  background-color: rgb(131, 127, 127);
-  width: 100%;
-  text-decoration: none;
-}
-header > ul > a {
-  text-decoration: none;
-}
 
 .img-nav {
   width: 4em;
 }
-.nav-header ul li a {
-  color: rgb(253, 253, 253);
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold; 
+  font-size: 24px; 
 }
 
 a:hover {
