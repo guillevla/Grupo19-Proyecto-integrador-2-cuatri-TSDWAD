@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/ballet.png" type="image/x-icon">
+    <title>La danza no descansa</title>
+    <link rel="stylesheet" href="./estilo.css" />
+    <!-- CSS only -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+    />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/ballet.png" class="img-nav" alt="Logo Danza no descansa"/>
+                    INSTITUTO NACIONAL DE DANZAS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registros</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                        <li><a class="dropdown-item" href="academia.html">Academia</a></li>
+                        <li><a class="dropdown-item" href="#">Profesores</a></li>
+                        <li><a class="dropdown-item" href="#">Alumnos</a></li>
+                        <li><a class="dropdown-item" href="#">Eventos</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <h2 class="fw-bold mb-4 text-center ">Ingrese los datos de la Academia</h2>
+        <form action="/guardar_datos" method="post">
+            <div class="mb-3">
+                <label for="nombreAcademia" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreAcademia" name="nombreAcademia" required>
+            </div>
+            <div class="mb-3">
+                <label for="direccionAcademia" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccionAcademia" name="direccionAcademia" required>
+            </div>
+            <div class="mb-3">
+                <label for="emailAcademia" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailAcademia" name="emailAcademia" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefonoAcademia" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefonoAcademia" name="telefonoAcademia" required>
+            </div>
+            <button type="submit" id="btnGuardar"class="btn btn-primary">Guardar</button>
+            <button type="button" id="btnVolver"class="btn btn-secondary">Cerrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('btnVolver').addEventListener('click', function() {
+            window.location.href = 'index.html';    /*vuelve a pagina inicial*/
+        });
+    </script>
+</body>
+</html>

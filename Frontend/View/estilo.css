@@ -8,20 +8,15 @@ body {
   background-image: url(./img/fondo.webp);
   object-fit:cover ;
 }
-header {
-  background-color: rgb(131, 127, 127);
-  width: 100%;
-  text-decoration: none;
-}
-header > ul > a {
-  text-decoration: none;
-}
 
 .img-nav {
   width: 4em;
 }
-.nav-header ul li a {
-  color: rgb(253, 253, 253);
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold; 
+  font-size: 24px; 
 }
 
 a:hover {
@@ -104,71 +99,59 @@ a:hover {
 
 /* Pie de pagina */
 
-.pie-pagina{
-    width: 100%;
-    background-color: #ee81f8;
+.pie-pagina {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
 }
 
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
-    padding: 45px 0px;
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-
-
+.logo img {
+  max-width: 100px;
 }
 
-.pie-pagina .grupo-1 .box h2{
-    color: black;
-    margin-bottom: 25px;
-    font-size: 25px;
+.redes a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-.pie-pagina .grupo-1 .box p{
-    color: black;
-    margin-bottom: 10px;
-
+.info {
+  max-width: 60%;
 }
 
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: rgb(100, 9, 247);
-    margin-right: 10px;
-    text-align: center;
-    transition: all 300ms ease ;
+.derechos {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover{
-    color:rgb(250, 58, 106);
+/* Estilos para los íconos de redes sociales */
+.fa-facebook {
+  background-color: #3b5998; /* Color de fondo de Facebook */
 }
 
-.pie-pagina .grupo-2{
-    padding: 15px 10px;
-    text-align: center;
-    color: black;
+.fa-instagram {
+  background-color: #e4405f; /* Color de fondo de Instagram */
 }
 
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
+.fa-twitter {
+  background-color: #1da1f2; /* Color de fondo de Twitter */
+}
+
+.fa-youtube {
+  background-color: #ff0000; /* Color de fondo de YouTube */
 }
 
 @media screen and (max-width:800px){
@@ -178,6 +161,10 @@ a:hover {
         grid-gap: 30px;
         padding: 35px 0px;
     }   
+
+    .card-container{
+      padding-bottom: 100px; /* Ajusta este valor según el espacio deseado entre las tarjetas */
+  }
 }
 .form-label{
 width: 100px;
