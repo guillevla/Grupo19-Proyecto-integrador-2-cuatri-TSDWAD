@@ -14,7 +14,7 @@ class Conectar():
             print("¡No se conectó!",descripcionError)
 
 #Crear academia - INSERT
-    def registrarAcademia(self, id_academia, nombre, direccion, email, telefono):
+    def registrar(self, id_academia, nombre, direccion, email, telefono):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor() #Crea un objeto de cursor, que se utiliza para ejecutar comandos SQL en la base de datos.
