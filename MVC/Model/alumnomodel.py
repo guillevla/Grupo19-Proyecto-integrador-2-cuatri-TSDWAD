@@ -14,7 +14,7 @@ class Conectar():
             print("¡No se conectó!",descripcionError)
 
 #Crear alumno - INSERT
-    def registrar(self, id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza):
+    def registrarAlumno(self, id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor() #Crea un objeto de cursor, que se utiliza para ejecutar comandos SQL en la base de datos.
@@ -36,8 +36,8 @@ class Conectar():
                     cursor = self.conexion.cursor()
                     sentenciaSQL= "SELECT * from Profesor where id_alumno="+id_alumno
                     cursor.execute(sentenciaSQL)
-                    listadoProfesor = cursor.fetchall()
-                    return listadoProfesor
+                    listadoAlumno = cursor.fetchall()
+                    return listadoAlumno
                 except:
                     print("No se pudo consultar a la base de datos")
                 finally:
