@@ -13,31 +13,31 @@ class Conectar():
         except mysql.connector.Error as descripcionError:
             print("¡No se conectó!",descripcionError)
 
-#Crear academia - INSERT
-    def registrar(self, id_academia, nombre, direccion, email, telefono):
+#Crear profesor - INSERT
+    def registrar(self, id_profesor, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, academia):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor() #Crea un objeto de cursor, que se utiliza para ejecutar comandos SQL en la base de datos.
-                sentenciaSQL= "INSERT INTO Academia (id_academia, nombre, direccion, email, telefono) VALUES(%s,%s,%s,%s,%s)" #Define una sentencia SQL de inserción que utiliza marcadores de posición %s para evitar posibles ataques de inyección de SQL.
-                data= (id_academia, nombre, direccion, email, telefono) # Crea una tupla llamada data con los valores que se insertarán en la tabla.
+                sentenciaSQL= "INSERT INTO Profesor (id_profesor, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, academia) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)" #Define una sentencia SQL de inserción que utiliza marcadores de posición %s para evitar posibles ataques de inyección de SQL.
+                data= (id_profesor, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, academia) # Crea una tupla llamada data con los valores que se insertarán en la tabla.
                 cursor.execute(sentenciaSQL,data) #Ejecuta la sentencia SQL con los datos proporcionados
                 self.conexion.commit()
             except Exception as e:
-                print("No se pudo registrar la Academia")
+                print("No se pudo registrar Profesor/a")
             finally:
                 if self.conexion.is_connected():
                     cursor.close()
                     self.conexion.close()   
 
-#Consultar Academia - SELECT
-    def consultarAcademia(self, id_academia):
+#Consultar Profesor - SELECT
+    def consultarProfesor(self, id_profesor):
             if self.conexion.is_connected():
                 try:
                     cursor = self.conexion.cursor()
-                    sentenciaSQL= "SELECT * from Academia where id_academia="+id_academia
+                    sentenciaSQL= "SELECT * from Profesor where id_profesor="+id_profesor
                     cursor.execute(sentenciaSQL)
-                    listadoAcademia = cursor.fetchall()
-                    return listadoAcademia
+                    listadoProfesor = cursor.fetchall()
+                    return listadoProfesor
                 except:
                     print("No se pudo consultar a la base de datos")
                 finally:
@@ -46,30 +46,30 @@ class Conectar():
                         self.conexion.close() 
 
 #Modificar Academia - UPDATE
-def modificarAcademia(self, id_academia, nombre, direccion, email, telefono):
+def modificarAcademia(self, id_profesor, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, academia):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor()
-                sentenciaSQL= "UPDATE Academia SET nombre="+nombre+", direccion="+direccion+", email="+email+", telefono="+telefono+" WHERE id_academia="+id_academia
+                sentenciaSQL= "UPDATE Profesor SET nombre="+nombre+", apellido="+apellido+", fecha_nacimiento="+fecha_nacimiento+", telefono="+telefono+" direccion="+direccion+", sexo="+sexo+", email="+email+", academia="+academia+" WHERE id_profesor="+id_profesor
                 cursor.execute(sentenciaSQL)
                 self.conexion.commit()
             except:
-                print("No se pudo modificar los datos de la Academia") 
+                print("No se pudo modificar los datos del Profesor/a") 
             finally:
                     if self.conexion.is_connected():
                         cursor.close()
                         self.conexion.close() 
 
-#Eliminar Academia- DELETE
-def eliminarAcademia(self,id_academia):
+#Eliminar Profesor- DELETE
+def eliminarAcademia(self,id_profesor):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor()
-                sentenciaSQL = "DELETE from Academia where id_academia="+id_academia
+                sentenciaSQL = "DELETE from Profesor where id_profesor="+id_profesor
                 cursor.execute(sentenciaSQL)
                 self.conexion.commit()                
             except:
-                print("No se pudo eliminar la Academia")
+                print("No se pudo eliminar Profesor/a")
             finally:
                     if self.conexion.is_connected():
                         cursor.close()
