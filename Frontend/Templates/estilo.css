@@ -8,20 +8,15 @@ body {
   background-image: url(./img/fondo.webp);
   object-fit:cover ;
 }
-header {
-  background-color: rgb(131, 127, 127);
-  width: 100%;
-  text-decoration: none;
-}
-header > ul > a {
-  text-decoration: none;
-}
 
 .img-nav {
   width: 4em;
 }
-.nav-header ul li a {
-  color: rgb(253, 253, 253);
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold; 
+  font-size: 24px; 
 }
 
 a:hover {
@@ -76,6 +71,38 @@ a:hover {
   display: flex;
   justify-content: center;
   margin: 50px 0 50px 0;
+
+}
+.header-noticias h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+  }
+  .header-noticias h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  .header-noticias:hover h2 {
+    color: #3498db; /* Cambia el color del texto al pasar el ratón */
+  }
+  .header-noticias h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background: #3498db; /* Cambia el color del subrayado al pasar el ratón */
 }
 .header-footer {
   padding: 50px;
