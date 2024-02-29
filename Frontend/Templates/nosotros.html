@@ -1,106 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/ballet.png" type="image/x-icon">
-    <title>La danza no descansa</title>
-    <link rel="stylesheet" href="./estilo.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="./img/ballet.png" type="image/x-icon">
+<title>Instituto Nacional de Danzas</title>
+<link rel="stylesheet" href="estilo.css" />
+<!-- CSS only -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Antonella -->
+<script src="https://kit.fontawesome.com/d096f3d646.js" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+
+</head>
 <body>
-  <header>
+<header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
+    <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="./img/ballet.png" class="img-nav" alt="Logo Danza no descansa" />
-          INSTITUTO NACIONAL DE DANZAS
+        <img src="./img/ballet.png" class="img-nav" alt="Logo Danza no descansa"/>
+        INSTITUTO NACIONAL DE DANZAS
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link" aria-current="page" href="dashboard.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item d-none">
+            <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item d-none">
+                <a class="nav-link" href="carrito.html">
+                    <img src="./img/carrito.png" alt="Carrito de compras">
+                </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registros</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                <li><a class="dropdown-item" href="academia.html">Academia</a></li>
-                <li><a class="dropdown-item" href="#">Profesores</a></li>
-                <li><a class="dropdown-item" href="#">Alumnos</a></li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registros</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="registroacademia.html">Academia</a></li>
+                <li><a class="dropdown-item" href="registroprofesor.html">Profesores</a></li>
+                <li><a class="dropdown-item" href="registroalumno.html">Alumnos</a></li>
                 <li><a class="dropdown-item" href="#">Eventos</a></li>
-              </ul>
+            </ul>
             </li>
-          </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</a>
+            </li>
+        </ul>
         </div>
-      </div>
+    </div>
     </nav>
-  </header>
-    <main>
-     <section class="container-xl">
-        <div class="row">
-            <div class="col">
-                <h2>Visión</h2>
-                <p>En el Instituto Nacionales de Danzas, construimos una comunidad vibrante.Celebramos la diversidad y fomentamos un ambiente inclusivo donde cada individuo se sienta valorado y respetado. 
-                    aquí encontrarás un espacio donde las conexiones personales se fortalecen a través de la danza, creando lazos duraderos entre estudiantes, familias e instructores.
-                </p>
+</header>   
+        <main>
+            <section class="container-xl">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h2 class="text-center my-4 py-2 bg-secondary text-white">Nuestro Instituto</h2>
+                        <img src="./img/edificiodanzas.jpg" alt="Instituto nacional de danzas" class="img-fluid img-thumbnail mb-3">
+                        <p class="vision-text">En el año 1995, un grupo apasionado de bailarines y amantes de la cultura se unieron con un sueño compartido: preservar y promover las danzas nacionales e internacionales. Este fue el inicio del Instituto Nacional de Danzas, un proyecto que no solo buscaba enseñar, sino también tejer una red de conexiones entre academias, profesores y alumnos a través de la expresión artística.
+
+                            La visión de este organismo, inspirada en el deseo de mantener viva la esencia de las danzas en todas su formas, llevó a la creación de un espacio que trasciende las barreras del tiempo. Desde el principio, el Instituto se convirtió en un faro cultural, iluminando la pasión por la danza y la rica herencia de Argentina.
+                            
+                            Con el correr de los años, el Instituto Nacional de Danzas se transformó en un crisol de talento y creatividad. Maestros respetados compartieron sus conocimientos, cada paso contaba una historia, y cada clase resonaba con el eco de antiguas tradiciones. Los estudiantes, desde los más jóvenes hasta los más experimentados, encontraron en el Instituto un santuario donde la danza no solo era aprendizaje técnico, sino un puente hacia el pasado.
+                            
+                            Las presentaciones de las academias registradas en el instituto, ya sea en pequeñas funciones comunitarias o en grandes escenarios, se convirtieron en eventos que trascendían el mero entretenimiento. Cada espectáculo era una celebración de la identidad y el testimonio vivo de la diversidad cultural que define a la nación.
+                            
+                            A medida que el Instituto Nacional de Danzas creció, también lo hizo su impacto en la comunidad. Programas educativos se expandieron, alcanzando a personas de todas las edades y trasfondos. Las generaciones más jóvenes fueron instruidas en la importancia de sus raíces culturales, mientras que los mayores redescubrían y compartían sus propias historias a través de la danza.
+                            
+                            El Instituto se convirtió en un hogar lejos de casa para muchos, donde se forjaron amistades, se transmitieron enseñanzas y se celebró la belleza de la diversidad. La visión de los fundadores no solo se había cumplido, sino que había florecido en algo más grande de lo que nunca habían imaginado.
+                            
+                            En el presente, el Instituto Nacional de Danzas continúa siendo un faro cultural, iluminando el camino para futuras generaciones. Cada año que pasa, la llama de la pasión por las danzas sigue manteniendo viva la tradición y dejando una huella indeleble en el tejido cultural de Argentina. La historia del Instituto es una danza perpetua, una coreografía que celebra la conexión eterna entre el pasado, el presente y el futuro.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="pie-pagina mt-5">
+            <div class="contenedor">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/ballet.png" alt="Logo Danza no descansa">
+                    </a>
+                </div>
+                <div class="redes">
+                    <a href="#" class="fa fa-facebook" aria-label="Facebook""></a>
+                    <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+                    <a href="#" class="fa-brands fa-x-twitter" aria-label="X-Twitter"></a>
+                    <a href="#" class="fa fa-youtube" aria-label="YouTube"></a>
+                </div>
+                <div class="info">
+                    <p class="whatsapp">
+                        <i class="fa-brands fa-whatsapp"><span>11-5566998877</span></i>
+                    </p>
+                    <p class="infoemail">
+                        institutondanzas@argentina.gob.ar
+                    </p>
+                </div>
             </div>
-            <div class="col">
-                <h2>Misión</h2>
-                <p>Nos dedicamos fervientemente a preservar y difundir las tradiciones de las danzas, reconociendo el valor intrínseco de cada ritmo, gesto y expresión que define la identidad cultural.
-                      Creemos en el poder de la danza como medio de conexión con nuestras raíces, y trabajamos incansablemente para transmitir ese conocimiento a las generaciones presentes y futuras.
-                      Te invitamos a explorar el fascinante mundo de las danzas con nosotros. Ya seas un principiante entusiasta o un bailarín experimentado, en el Instituto Nacional de Danzas, encontrarás un lugar donde tu amor por la danza y tu conexión con la cultura
-                      se fusionarán en una experiencia única e inolvidable.
-                      ¡Únete a nosotros y déjanos guiarte en este apasionante viaje cultural a través de la danza!</p>
+            <div class="derechos">
+                <small>&copy; <span id="currentYear"></span> <b>Instituto Nacional de Danzas</b> - Todos Los Derechos Reservados</small>
             </div>
-        </div>
-        
-    </section>
-    
-    </main>
-</body>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-crossorigin="anonymous"
-></script>
-<footer class="pie-pagina mt-5">
-  <div class="contenedor">
-      <div class="logo-redes">
-          <div class="logo">
-              <a href="#">
-                  <img src="./img/ballet.png" alt="Logo Danza no descansa">
-              </a>
-          </div>
-          <div class="redes">
-              <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
-              <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
-              <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
-              <a href="#" class="fa fa-youtube" aria-label="YouTube"></a>
-          </div>
-      </div>
-      <div class="info">
-          <h2>Sobre Nosotros</h2>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quibusdam.
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam.</p>
-      </div>
-  </div>
-  <div class="derechos">
-      <small>&copy; <span id="currentYear"></span> <b>La Danza no descansa</b> - Todos Los Derechos Reservados</small>
-  </div>
-</footer>
+        </footer>
+        <script>
+            // Obtener el año actual
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+
+            <!--CONTENEDOR DE EL CONTACTO DEL INSTITUTO(direccion, telefono, etc) Y LOS LINK DE TODAS SUS REDES SOCIALES-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            // Variable para indicar el estado de autenticación (puedes ajustarlo según tu lógica)
+            var usuarioAutenticado = false;
+
+            // Obtén la lista de elementos que quieres mostrar u ocultar
+            var elementosMenu = document.querySelectorAll('.nav-item');
+
+            // Función para mostrar u ocultar elementos específicos del menú según la autenticación
+            function gestionarElementosMenu() {
+            elementosMenu.forEach(function (elemento) {
+                var enlace = elemento.querySelector('.nav-link');
+
+                // Verifica si el enlace pertenece a los elementos que deseas ocultar
+                if (enlace && (enlace.href.includes('tienda.html') || enlace.href.includes('carrito.html') || enlace.href.includes('registro.html'))) {
+                    if (usuarioAutenticado) {
+                        elemento.classList.remove('d-none'); // Mostrar elemento
+                    } else {
+                        elemento.classList.add('d-none'); // Ocultar elemento
+                    }
+                }
+            });
+            }
+
+            // Llama a la función al cargar la página
+            gestionarElementosMenu();
+
+            // Puedes cambiar el estado de autenticación y llamar a la función según sea necesario
+            // Por ejemplo, si el usuario inicia sesión correctamente
+            // usuarioAutenticado = true;
+            // gestionarElementosMenu();
+            });
+        </script>
+    </body>
 </html>

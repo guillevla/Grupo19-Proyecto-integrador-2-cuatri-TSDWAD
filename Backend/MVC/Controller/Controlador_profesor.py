@@ -1,5 +1,5 @@
 from Model.claseusuario import *
-from  Model.profesormodel import *
+from  Model.Modelo_profesor import *
 
 #Crear profesor 
 def crearUsuarioProfesor(self, id_profesor, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, id_academia, password):

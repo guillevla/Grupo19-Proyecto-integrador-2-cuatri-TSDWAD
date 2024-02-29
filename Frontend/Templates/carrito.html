@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="./img/ballet.png" type="image/x-icon">
+<title>La danza no descansa</title>
+<link rel="stylesheet" href="estilo.css" />
+<!-- CSS only -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Antonella -->
+<script src="https://kit.fontawesome.com/d096f3d646.js" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+        <img src="./img/ballet.png" class="img-nav" alt="Logo Danza no descansa"/>
+        INSTITUTO NACIONAL DE DANZAS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrito.html">
+                    <img src="./img/carrito.png" alt="Carrito de compras">
+                </a>
+            </li>
+            
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registros</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <li><a class="dropdown-item" href="registroacademia.html">Academia</a></li>
+                <li><a class="dropdown-item" href="registroprofesor.html">Profesores</a></!--li>
+                <li><a class="dropdown-item" href="registroalumno.html">Alumnos</a></li>
+                <li><a class="dropdown-item" href="#">Eventos</a></li>
+            </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+</header>
+<h2 class="text-center my-4 py-2 bg-secondary text-white">Carrito de Compras</h2>
+
+<div id="carrito-container" class="container">
+    <!-- Aquí se mostrará el contenido del carrito dinámicamente -->
+</div>
+
+<!--<script>
+    // Obtener el carrito del almacenamiento local
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Función para mostrar el contenido del carrito
+    function mostrarCarrito() {
+        const carritoContainer = document.getElementById('carrito-container');
+        carritoContainer.innerHTML = '';
+
+        if (carrito.length === 0) {
+            carritoContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        } else {
+            carrito.forEach(producto => {
+                const productoHTML = `
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h5 class="card-title">${producto.nombre}</h5>
+                            <p class="card-text">Cantidad: ${producto.cantidad}</p>
+                            <p class="card-text">Precio: $${producto.precio.toFixed(2)}</p>
+                            <button class="btn btn-danger" onclick="eliminarDelCarrito('${producto.nombre}')">Eliminar</button>
+                        </div>
+                    </div>
+                `;
+                carritoContainer.innerHTML += productoHTML;
+            });
+        }
+    }
+
+    // Función para eliminar un producto del carrito
+    function eliminarDelCarrito(nombre) {
+        carrito = carrito.filter(producto => producto.nombre !== nombre);
+        actualizarCarrito();
+    }
+
+    // Función para actualizar el carrito en el almacenamiento local
+    function actualizarCarrito() {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        mostrarCarrito();
+    }
+
+    // Mostrar el carrito al cargar la página
+    mostrarCarrito();
+</script>-->
+<script src="funcionescarrito.js"></script>
+</body>
+</html>
