@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="./img/ballet.png" type="image/x-icon">
-<title>Formulario Alta de Academia</title>
+<title>Formulario Alta de Alumno/a</title>
 <link rel="stylesheet" href="estilo.css" />
 <!-- CSS only -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -61,40 +61,69 @@
     </div>
     </nav>
 </header>
+<body>
     <div class="container mt-4">
-        <h1 class="mb-3">Formulario Alta Academia</h1>
-        <form action="/guardar_datos" method="post">
-            <div class="mb-3">
-                <label for="nombreAcademia" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreAcademia" name="nombreAcademia" required>
+        <h1 class="mb-3">Formulario Alta de Alumno/a</h1>
+        
+        <form action="crear_alumno" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre" class="col-form-label">Nombre:</label>
+                    <input type="text" name="nombre" class="form-control" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="apellido" class="col-form-label">Apellido:</label>
+                    <input type="text" name="apellido" class="form-control" required>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="direccionAcademia" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccionAcademia" name="direccionAcademia" required>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="telefono" class="col-form-label">Teléfono:</label>
+                    <input type="text" name="telefono" class="form-control" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="direccion" class="col-form-label">Dirección:</label>
+                    <input type="text" name="direccion" class="form-control" required>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="emailAcademia" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailAcademia" name="emailAcademia" required>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="sexo" class="col-form-label">Sexo:</label>
+                    <select name="sexo" class="form-control" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="nobinario">No Binario</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="telefonoAcademia" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefonoAcademia" name="telefonoAcademia" required>
+
+            <div>
+                <div class="form-group col-md-6">
+                    <label for="academia" class="col-form-label">Academia:</label>
+                    <select name="academia" class="form-control" required>
+                        <option>Selecciona Academia</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="ciudadAcademia" class="form-label">Ciudad</label>
-                <select name="ciudadAcademia" class="form-control" required>
-                    <option>Selecciona Ciudad</option>
-                </select>
-            </div>
-            <button type="submit" id="btnGuardar"class="btn btn-primary">Guardar</button>
-            <button type="button" id="btnVolver"class="btn btn-secondary">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Agregar Alumno/a</button>
+            <a href="index.html" class="btn btn-secondary ml-2">Volver</a>
         </form>
     </div>
     <script>
-        document.getElementById('btnVolver').addEventListener('click', function() {
-            window.location.href = 'index.html';    /*vuelve a pagina inicial*/
-        });
+        // Obtener el año actual
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+    
+        <!--CONTENEDOR DE EL CONTACTO DEL INSTITUTO(direccion, telefono, etc) Y LOS LINK DE TODAS SUS REDES SOCIALES-->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
