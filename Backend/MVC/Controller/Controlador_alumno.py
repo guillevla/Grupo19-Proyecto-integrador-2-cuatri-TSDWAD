@@ -14,12 +14,12 @@ class Conectar():
             print("¡No se conectó!",descripcionError)
 
 #Crear alumno - INSERT
-    def registrarAlumno(self, id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza):
+    def registrarAlumno(self, id_alumno, nombre, apellido, telefono, direccion, email, id_danza, id_academia, id_ciudad):
         if self.conexion.is_connected():
             try:
                 cursor = self.conexion.cursor() #Crea un objeto de cursor, que se utiliza para ejecutar comandos SQL en la base de datos.
-                sentenciaSQL= "INSERT INTO Alumno (id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)" #Define una sentencia SQL de inserción que utiliza marcadores de posición %s para evitar posibles ataques de inyección de SQL.
-                data= (id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza) # Crea una tupla llamada data con los valores que se insertarán en la tabla.
+                sentenciaSQL= "INSERT INTO Alumno (id_alumno, nombre, apellido, fecha_nacimiento, telefono, direccion, sexo, email, danza, ciudad, academia) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" #Define una sentencia SQL de inserción que utiliza marcadores de posición %s para evitar posibles ataques de inyección de SQL.
+                data= (id_alumno, nombre, apellido, telefono, direccion, email, id_academia, id_ciudad, id_danza) # Crea una tupla llamada data con los valores que se insertarán en la tabla.
                 cursor.execute(sentenciaSQL,data) #Ejecuta la sentencia SQL con los datos proporcionados
                 self.conexion.commit()
             except Exception as e:
