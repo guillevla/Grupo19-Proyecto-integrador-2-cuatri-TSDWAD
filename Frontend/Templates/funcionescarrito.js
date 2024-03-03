@@ -42,7 +42,7 @@ function mostrarCarrito() {
     carritoContainer.innerHTML = '';
 
     if (carrito.length === 0) {
-        carritoContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        carritoContainer.innerHTML = '<p class="text-center alert alert-info h5">El carrito está vacío.</p>';
     } else {
         carrito.forEach(producto => {
             const productoHTML = `
