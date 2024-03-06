@@ -26,10 +26,10 @@ function mostrarMensaje(mensaje) {
     mensajeElemento.className = 'mensaje';
     mensajeElemento.textContent = mensaje;
 
-    // Agregar el mensaje al DOM (puedes ajustar el lugar donde lo agregas)
+    // Agregar el mensaje al DOM 
     document.body.appendChild(mensajeElemento);
 
-    // Desaparecer el mensaje después de un tiempo (por ejemplo, 3 segundos)
+    // Desaparecer el mensaje después de un tiempo
     setTimeout(() => {
         document.body.removeChild(mensajeElemento);
     }, 3000); // 3000 milisegundos = 3 segundos
@@ -42,7 +42,7 @@ function mostrarCarrito() {
     carritoContainer.innerHTML = '';
 
     if (carrito.length === 0) {
-        carritoContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        carritoContainer.innerHTML = '<p class="text-center alert alert-info h5">El carrito está vacío.</p>';
     } else {
         carrito.forEach(producto => {
             const productoHTML = `
