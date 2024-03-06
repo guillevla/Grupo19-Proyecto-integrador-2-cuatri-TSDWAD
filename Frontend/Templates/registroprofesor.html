@@ -65,7 +65,7 @@
     <div class="container mt-4">
         <h1 class="mb-3">Formulario Alta Profesor/a</h1>
         
-        <form action="crear_profesor" method="post">
+        <form id="academiaForm" action="crear_profesor" method="post">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="nombre" class="col-form-label">Nombre:</label>
@@ -110,13 +110,27 @@
                     <label for="email" class="col-form-label">Academia:</label>
                     <select name="academia" class="form-control" required>
                         <option>Selecciona Academia</option>
+                        <option>Ecos de mi Tierra</option>
+                        <option>La Milonga</option>
+                        <option>Raices Españolas</option>
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Agregar Profesor/a</button>
+            <button type="button" id="btnAgregarProf" class="btn btn-primary">Agregar Profesor/a</button>
             <a href="dashboard.html" class="btn btn-secondary ml-2">Volver</a>
         </form>
     </div>
+    <script>
+        document.getElementById('btnAgregarProf').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+    
+            // Aquí puedes agregar la lógica para guardar los datos en la base de datos
+    
+            // Limpia los campos del formulario
+            document.getElementById('academiaForm').reset();
+            alert('Registro exitoso!');
+        });
+    </script>
     <script>
         document.getElementById('btnVolver').addEventListener('click', function() {
             window.location.href = 'dashboard.html';    /*vuelve a pagina inicial*/

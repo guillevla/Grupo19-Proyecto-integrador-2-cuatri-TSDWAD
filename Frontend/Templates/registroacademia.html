@@ -63,7 +63,7 @@
 </header>
     <div class="container mt-4">
         <h1 class="mb-3">Formulario Alta Academia</h1>
-        <form action="/guardar_datos" method="post">
+        <form id="academiaForm" action="/guardar_datos" method="post">
             <div class="mb-3">
                 <label for="nombreAcademia" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombreAcademia" name="nombreAcademia" required>
@@ -84,12 +84,29 @@
                 <label for="ciudadAcademia" class="form-label">Ciudad</label>
                 <select name="ciudadAcademia" class="form-control" required>
                     <option>Selecciona Ciudad</option>
+                    <option>Córdoba</option>
+                    <option>Rosario</option>
+                    <option>CABA</option>
+                    <option>Mendoza</option>
                 </select>
             </div>
-            <button type="submit" id="btnGuardar"class="btn btn-primary">Guardar</button>
+            <button type="button" id="btnGuardar"class="btn btn-primary">Guardar</button>
             <button type="button" id="btnVolver"class="btn btn-secondary">Cerrar</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('btnGuardar').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+    
+            // Aquí puedes agregar la lógica para guardar los datos en la base de datos
+    
+            // Limpia los campos del formulario
+            document.getElementById('academiaForm').reset();
+            alert('Registro exitoso!');
+        });
+    </script>
+
     <script>
         document.getElementById('btnVolver').addEventListener('click', function() {
             window.location.href = 'dashboard.html';    /*vuelve a pagina inicial*/
@@ -100,5 +117,6 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
