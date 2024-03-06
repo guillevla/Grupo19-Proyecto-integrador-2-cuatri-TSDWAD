@@ -6,7 +6,7 @@ console.log('Usuarios almacenados:', usuarios);
 function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('passwordlogin').value;
-
+    var usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     // Busca el usuario en el array de usuarios registrados
     var user = usuarios.find(user => user.username === username && user.password === password);
 
@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Almacena los datos en el array global de usuarios
         usuarios.push({ username: nombre, email: email, password: password });
-        
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
         document.getElementById('success-message').innerText = 'El usuario ' + nombre + ' se registró con éxito';
         setTimeout(function () {
             myModal.hide();
